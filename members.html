@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Members</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .background-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('membersbg.jpg') no-repeat center center/cover;
+            z-index: -1;
+        }
+
+        .background-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Adjust the opacity to dim the background */
+        }
+
+        header {
+            background-color: #0e1c1c;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            box-shadow: 5px 10px 50px black;
+        }
+
+        h1 {
+            font-family: Arial, sans-serif;
+            letter-spacing: 8px;
+            word-spacing: 14px;
+            font-weight: bold;
+            margin-left: 50px;
+            font-size: 1.5em;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin: 0 1em;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            font-size: 1em;
+            text-align: center;
+            padding: 10px 25px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-family: 'Lucida Console', monospace;
+            transition: transform 0.6s ease-in-out;
+        }
+
+        nav ul li a:hover {
+            background-color: white;
+            color: black;
+            animation: bounce-to-bottom-animation .5s;
+        }
+
+        @keyframes bounce-to-bottom-animation {
+            0% {
+                transform: translateY(0);
+            }
+            25% {
+                transform: translateY(5px);
+            }
+            50% {
+                transform: translateY(0);
+            }
+            75% {
+                transform: translateY(3.5px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 70px;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        .main h3, .main h4 {
+            color: white;
+            font-family: Arial, sans-serif;
+            letter-spacing: 2px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(2px);
+            -webkit-backdrop-filter: blur(2.5px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 30px;
+            text-align: center;
+            padding: 20px;
+            width: 200px;
+            height: 330px;
+        }
+
+        img {
+            width: 205px;
+            height: 210px;
+            border-radius: 50%;
+        }
+
+        @media screen and (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            h1 {
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul li {
+                margin: 5px 0;
+            }
+
+            nav ul li a {
+                font-size: 0.8em;
+                padding: 10px 20px;
+            }
+            h2 {
+                font-size: 5vw;
+            }
+            
+            .card {
+                width: 45%;
+                max-width: 200px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            h1 {
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul li {
+                margin: 5px 0;
+            }
+
+            nav ul li a {
+                font-size: 0.8em;
+                padding: 10px 20px;
+            }
+
+            h2 {
+                font-size: 6vw;
+            }
+            
+            .card {
+                width: 80%;
+                max-width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="background-container"></div>
+
+<header>
+    <h1>Crusty Cup Café</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="vision.html">Vision</a></li>
+            <li><a href="mission.html">Mission</a></li>
+        </ul>
+    </nav>
+</header>
+
+<h2>Members</h2>
+
+<div class="main">
+    <div class="container">
+        <div class="card">
+            <img src="sample.png" alt="John Mark Agsaoay">
+            <h3>John Mark Agsaoay</h3>
+            <h4>12-ITE-02</h4>
+        </div>
+        <div class="card">
+            <img src="frank.jpg" alt="Frank Kenneth Ferrer">
+            <h3>Frank Kenneth Ferrer</h3>
+            <h4>12-ITE-02</h4>
+        </div>
+        <div class="card">
+            <img src="kurt.jpg" alt="Kurt John Kyzel Fabro">
+            <h3>Kurt John Kyzel Fabro</h3>
+            <h4>12-ITE-02</h4>
+        </div>
+        <div class="card">
+            <img src="jm.jpg" alt="John Michael Mercado">
+            <h3>John Michael Mercado</h3>
+            <h4>12-ITE-02</h4>
+        </div>
+        <div class="card">
+            <img src="mc.jpg" alt="Mark Christian Salvador">
+            <h3>Mark Christian Salvador</h3>
+            <h4>12-ITE-02</h4>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
